@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()], // Remove this line if not using React
 
   // ✅ Required for GitHub Pages Deployment
-  base: '/your-repo-name/', // Replace with your actual GitHub repository name
+  base: '/birthday_website/', // Replace with your actual GitHub repository name
 
   server: {
     port: 5173,          // Ensures the server runs on port 5173
