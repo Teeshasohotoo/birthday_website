@@ -1,3 +1,4 @@
+import React from 'react';  // ✅ Add this line if missing
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Home,Picture,Card,Cake,Present } from "./components"
 import './index.css'

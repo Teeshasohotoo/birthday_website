@@ -1,23 +1,49 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { picture} from '../assets';
 import { Link } from 'react-router-dom'; 
 import SectionWrapper from './SectionWrapper';
-// Add your own images by putting them in the assets folder and import them.
-const images = [
- picture,
- picture,
- picture,
- picture,
 
+// Import all 13 unique images
+import img1 from '../assets/image1.jpg';
+import img2 from '../assets/image2.jpg';
+import img3 from '../assets/image3.jpg';
+import img4 from '../assets/image4.jpg';
+import img5 from '../assets/image5.jpg';
+import img6 from '../assets/image6.jpg';  
+import img7 from '../assets/image7.jpg';  
+import img8 from '../assets/image8.jpg';
+import img9 from '../assets/image9.jpg';  
+import img10 from '../assets/image10.jpg';  
+import img11 from '../assets/image11.jpg';  
+import img12 from '../assets/image12.jpg';  
+import img13 from '../assets/image13.jpg';  
+
+// Array containing all 13 images
+const images = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13
 ];
+
 function Picture() {
   const [loadedImages, setLoadedImages] = useState(0);
 
   const handleImageLoad = () => {
     setLoadedImages((prev) => prev + 1);
   };
+
   const allImagesLoaded = loadedImages === images.length;
+
   return (
     <SectionWrapper>
       <Link to="/card">
@@ -25,11 +51,13 @@ function Picture() {
           You're Getting Old! :P
         </p>
       </Link>
+
       {!allImagesLoaded && (
         <div className="absolute inset-0 flex justify-center items-center">
           <p className="text-xl font-medium text-gray-500">Loading images...</p>
         </div>
       )}
+
       {images.map((image, index) => (
         <motion.div
           key={index}

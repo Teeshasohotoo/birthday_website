@@ -1,3 +1,4 @@
+import React from 'react';  // ✅ Add this line if missing
 import { useEffect, useState } from "react";
 import "../assets/css/cake.css";
 import { CakeSVG, confetti } from "../assets";
